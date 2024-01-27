@@ -67,41 +67,41 @@ const add0 = () => {
 };
 
 const add = () => {
-  arrplus = parseInt(arr);
+  arrplus = parseFloat(arr);
   arr = "";
   p.innerHTML = arrplus + " + " + arr;
 };
 
 const subtract = () => {
-  arrmin = parseInt(arr);
+  arrmin = parseFloat(arr);
   arr = "";
   p.innerHTML = arrmin + " - " + arr;
 };
 
 const multiply = () => {
-  arrmult = parseInt(arr);
+  arrmult = parseFloat(arr);
   arr = "";
   p.innerHTML = arrmult + " * " + arr;
 };
 
 const divide = () => {
-  arrdiv = parseInt(arr);
+  arrdiv = parseFloat(arr);
   arr = "";
   p.innerHTML = arrdiv + " / " + arr;
 };
 
 const enter = () => {
   if (arrplus != null) {
-    arr = arrplus + parseInt(arr);
+    arr = arrplus + parseFloat(arr);
     arrplus = null;
   } else if (arrmin != null) {
-    arr = arrmin - parseInt(arr);
+    arr = arrmin - parseFloat(arr);
     arrmin = null;
   } else if (arrmult != null) {
-    arr = arrmult * parseInt(arr);
+    arr = arrmult * parseFloat(arr);
     arrmult = null;
   } else if (arrdiv != null) {
-    arr = arrdiv / parseInt(arr);
+    arr = arrdiv / parseFloat(arr);
     arrdiv = null;
   }
   p.innerHTML = arr;
@@ -111,5 +111,23 @@ const enter = () => {
 const cl = () => {
   arr = "";
   console.log(arr);
-  p.innerHTML = 0;
+  p.innerHTML = "";
+};
+
+const negativ = () => {
+  arr *= -1;
+  p.innerHTML = arr;
+  console.log(arr);
+};
+
+const percentage = () => {
+  let secondarr = arr;
+  arr /= 100;
+  p.innerHTML = ` 1% of ${secondarr} is: ${arr} `;
+};
+
+const dot = () => {
+  let prv = p.innerHTML;
+  p.innerHTML = prv + ".";
+  arr = arr + ".";
 };
