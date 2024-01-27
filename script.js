@@ -66,32 +66,50 @@ const add0 = () => {
   p.innerHTML += 0;
 };
 
-const add = () => {
-  arrplus = parseFloat(arr);
-  arr = "";
-  p.innerHTML = arrplus + " + " + arr;
+const addition = () => {
+  if (isNaN(parseFloat(arr)) === true) {
+    return;
+  } else {
+    arrplus = parseFloat(arr);
+    arr = "";
+    p.innerHTML = arrplus + " + " + arr;
+  }
 };
 
 const subtract = () => {
-  arrmin = parseFloat(arr);
-  arr = "";
-  p.innerHTML = arrmin + " - " + arr;
+  if (isNaN(parseFloat(arr)) === true) {
+    return;
+  } else {
+    arrmin = parseFloat(arr);
+    arr = "";
+    p.innerHTML = arrmin + " - " + arr;
+  }
 };
 
 const multiply = () => {
-  arrmult = parseFloat(arr);
-  arr = "";
-  p.innerHTML = arrmult + " * " + arr;
+  if (isNaN(parseFloat(arr)) === true) {
+    return;
+  } else {
+    arrmult = parseFloat(arr);
+    arr = "";
+    p.innerHTML = arrmult + " * " + arr;
+  }
 };
 
 const divide = () => {
-  arrdiv = parseFloat(arr);
-  arr = "";
-  p.innerHTML = arrdiv + " / " + arr;
+  if (isNaN(parseFloat(arr)) === true) {
+    return;
+  } else {
+    arrdiv = parseFloat(arr);
+    arr = "";
+    p.innerHTML = arrdiv + " / " + arr;
+  }
 };
 
 const enter = () => {
-  if (arrplus != null) {
+  if (isNaN(parseFloat(arr)) === true) {
+    return;
+  } else if (arrplus != null) {
     arr = arrplus + parseFloat(arr);
     arrplus = null;
   } else if (arrmin != null) {
