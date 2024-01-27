@@ -122,7 +122,7 @@ const enter = () => {
     arr = arrdiv / parseFloat(arr);
     arrdiv = null;
   }
-  p.innerHTML = arr;
+  p.innerHTML = arr.toPrecision(12);
   console.log(arr);
 };
 
